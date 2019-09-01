@@ -19,12 +19,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showMessagePressed(_ sender: UIButton) {
-        print("Show Message was clicked!")
-        messageLabel.text = "You Are Awesome!"
-    }
-    @IBAction func showAnotherMessagePressed(_ sender: UIButton) {
-        print("Show Another Message was clicked!")
-        messageLabel.text = "You Are Great!"
+        if messageLabel.text == "You Are Awesome!" {
+            messageLabel.text = "You Are Great!"
+        } else if messageLabel.text == "You Are Great!" {
+            messageLabel.text = "You Are Amazing!"
+        } else {
+            messageLabel.text = "You Are Awesome!"
+        }
     }
     
 }
