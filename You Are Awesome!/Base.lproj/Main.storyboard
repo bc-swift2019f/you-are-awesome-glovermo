@@ -18,16 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFs-dn-gCR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFs-dn-gCR">
                                 <rect key="frame" x="16" y="44" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="c90-PM-vJZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-rZ-gJy">
-                                <rect key="frame" x="135" y="152" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-iP-9Vm">
+                                <rect key="frame" x="16" y="190" width="343" height="539"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-rZ-gJy">
+                                <rect key="frame" x="100" y="152" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4hz-y7-gNa"/>
+                                    <constraint firstAttribute="width" constant="175" id="VEd-4y-Wvp"/>
+                                </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ybf-Ac-S2W"/>
@@ -35,7 +43,24 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TKz-rZ-gJy" firstAttribute="top" secondItem="zFs-dn-gCR" secondAttribute="bottom" constant="8" id="6fL-fZ-MSi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4hv-iP-9Vm" secondAttribute="trailing" constant="16" id="7m4-8u-cZ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zFs-dn-gCR" secondAttribute="trailing" constant="16" id="H1e-IZ-sAQ"/>
+                            <constraint firstItem="TKz-rZ-gJy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Njn-8E-6J1"/>
+                            <constraint firstItem="TKz-rZ-gJy" firstAttribute="top" secondItem="zFs-dn-gCR" secondAttribute="bottom" constant="8" id="W4e-va-uEn"/>
+                            <constraint firstItem="4hv-iP-9Vm" firstAttribute="top" secondItem="TKz-rZ-gJy" secondAttribute="bottom" constant="8" id="XkA-Hw-Zh9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4hv-iP-9Vm" secondAttribute="bottom" constant="49" id="eAL-Tc-prB"/>
+                            <constraint firstItem="zFs-dn-gCR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uYJ-I7-ZmN"/>
+                            <constraint firstItem="zFs-dn-gCR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vaL-Z5-hoi"/>
+                            <constraint firstItem="4hv-iP-9Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zOI-qe-MXz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W4e-va-uEn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="zFs-dn-gCR" id="gbJ-dh-TA0"/>
@@ -46,4 +71,7 @@
             <point key="canvasLocation" x="40.799999999999997" y="20.689655172413794"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>
